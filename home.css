@@ -226,7 +226,10 @@ ul{
     .menubar{
         display: none;
     }
-    
+    .burger{
+        margin-left: 2em;
+        display: block;
+    }
     
     
     
