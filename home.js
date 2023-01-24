@@ -1,9 +1,9 @@
-const cart = document.querySelector("nav.cart")
+const cart = document.querySelector("nav .cart")
 const cartSideBar = document.querySelector(".cart-sidebar")
 const closeCart = document.querySelector(".close-cart")
 const burger = document.querySelector(".burger")
 const menuSideBar = document.querySelector(".menu-sidebar")
-const closeMenu = document.querySelector(".closemenu")
+const closeMenu = document.querySelector(".close-menu")
 const cartItemsTotal = document.querySelector(".noi")
 const cartPriceTotal = document.querySelector(".total-amount")
 const cartUi = document.querySelector(".cart-sidebar .cart")
@@ -11,15 +11,15 @@ const totalDiv = document.querySelector(".total-sum")
 const clearBtn = document.querySelector("clear-cart-btn")
 const cartContent = document.querySelector("cart-content")
 
-let cart=[];
-let buttonsDom=[];
+let Cart = [];
+let buttonsDom = [];
 
 cart.addEventListener("click", function(){
     cartSideBar.style.transform = "translate(0%)"
     const bodyOverlay = document.createElement("div")
     bodyOverlay.classList.add("overlay");
     setTimeout(function(){
-        document.querySelector("body").append(bodyOverlay)
+        document.body.appendChild(bodyOverlay)
     },300)
 
 })
@@ -27,5 +27,12 @@ cart.addEventListener("click", function(){
 closeCart.addEventListener("click", function(){
     cartSideBar.style.transform = "translate(100%)"
     const bodyOverlay = document.querySelector(".overlay")
-    Document.querySelector("body").removechild(bodyOverlay)
+    document.querySelector("body").removeChild(bodyOverlay)
+})
+
+burger.addEventListener("click",function(){
+    menuSideBar.style.transform = "translate(0%)"
+})
+closeMenu.addEventListener("click",function(){
+    menuSideBar.style.transform = "translate(-100%)"
 })

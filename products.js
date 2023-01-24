@@ -1,4 +1,4 @@
-{
+const products =  {
     "items":[
         {
             "sys": {"id":"1"},
